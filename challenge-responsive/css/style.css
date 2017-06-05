@@ -1,0 +1,235 @@
+@import 'https://fonts.googleapis.com/css?family=Courgette';
+
+/* 
+Reset
+*/
+
+*{
+	margin: 0;
+	padding: 0;
+}
+li{
+		list-style-type:none;
+	}
+
+html{
+	font-size: 62.5%;
+}
+
+body{
+	font-family: Arial, sans-serif;
+	font-size: 1.5rem;
+	text-align: center;
+	background-image: url(../img/background.png);
+
+		/* EN PLUS : Effet parallax */
+		background-attachment: fixed;
+}
+
+h1, h2, h3, li:first-child a {
+	font-family: 'Courgette', cursive;
+	color: #EB43A3;
+	margin: 3rem auto;
+}
+
+h1 {
+    color: #C55394;
+    margin: 5rem auto 0 auto;
+}
+
+p{
+	margin-bottom: 2rem;
+}
+
+a{
+	text-decoration: none;
+	color: white;
+	padding: 1rem;
+
+	/* Faire une transition entre les deux états des balises A */
+	-webkit-transition: all .5s;
+	transition: all .5s;
+}
+
+a:hover{
+	background-color: #EB43A3;
+}
+
+img{
+	width: 100%;
+}
+
+iframe {
+	width: 100%;
+	min-height: 25rem;
+	border: 0;
+}
+
+
+
+/* 
+Header
+*/
+
+header{
+	background-image: url(../img/rainbow.png);
+	background-size: 90%;
+	background-position: bottom;
+	background-repeat: no-repeat;
+	padding-bottom: 5rem;
+
+	/* Pour la NAV bloquée en haut */
+	padding-top: 5rem;
+}
+
+nav{
+	background-color: #C55394;
+	margin-bottom: 5rem;
+
+		/*
+		EN PLUS : Bloquer la NAV en haut du site
+		*/
+		position: fixed;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		width: 100%;
+}
+
+
+li:not(:first-child){
+	display: none;
+}
+
+li:first-child a {
+	font-size: 2rem;
+	color: white;
+}
+
+/* Supprimer l'effet sur la balise A du premier LI */
+li:first-child a:hover{
+	background-color: transparent;
+}
+
+
+
+/* 
+Main
+*/
+main{
+	padding: 2rem;
+	background-color: white;
+	margin: 0 2rem 3rem 2rem;
+
+	/* 
+	Ne pas oublier les préfixes pour être sûr que 
+	les propriétés s'affichent sur tous les navigateurs 
+	*/
+	-webkit-box-shadow: 0 0 1rem rgba(0,0,0,.5);
+	-moz-box-shadow: 0 0 1rem rgba(0,0,0,.5);
+	box-shadow: 0 0 1rem rgba(0,0,0,.5);
+
+	-webkit-border-radius: 1rem;
+	border-radius: 1rem;
+}
+
+
+
+/* 
+Section "Le Principe"
+*/
+section:first-of-type h2{
+	margin-top: 1rem;
+}
+
+ul{
+	padding: 1rem;
+}
+
+
+
+/* 
+Section "Nos Licornes"
+*/	
+section:nth-child(2) figure {
+	/* Placer l'ARTICLE en RELATIVE pour bloquer les enfants */
+ 	position: relative;
+}
+
+section:nth-child(2) figure:not(:last-of-type), section:nth-child(3) iframe{
+	margin-bottom: 3rem;
+}
+
+section:nth-child(2) figure figcaption {
+	color: white;
+	position: absolute;
+	margin-bottom: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 1rem 0;
+	background-color: rgba(0,0,0,.7);
+}
+
+
+
+/*
+Section "Nous Contacter"
+*/
+section:last-child p{
+	margin-bottom: .5rem;
+}
+form{
+	margin-top: 2rem;
+}
+
+input{
+	display: block;
+	width: 98%;
+	padding: .5rem 0;
+	text-indent: .5rem;
+}
+
+/*
+Sélectionner une balise par son attribuit
+*/
+[type="submit"]{
+	background-color: #C55394;
+	color: white;
+	margin-top: 1rem;
+	border: none;
+	width: 100%;
+	border: .1rem solid #C55394;
+}
+
+
+
+/* 
+Footer
+*/
+footer {
+	background-color: #E577B5;
+	color: white;
+	font-size: 1rem;
+	padding: 1rem;
+}
+
+
+/*
+EN PLUS : Animations
+*/
+@-webkit-keyframes animTitle{
+	from {left:0; opacity: 0}
+	to {left:50%; opacity: 1}
+}
+
+@keyframes animTitle{
+	from {left:0; opacity: 0}
+	to {left:50%; opacity: 1}
+}
+
+
+
+/* 
+Responsive Design
+*/
